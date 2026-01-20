@@ -1,9 +1,196 @@
-<h1>Furkan Keskiner</h1>
-<h2>Computer Engineer</h2>
-<p>
-I build web applications and work on software projects involving
-frontend development, APIs, and data-driven systems.
-</p>
-<a href="assets/resume.pdf">Download CV</a>
-<a href="https://github.com/furkankeskiner">GitHub</a>
-<a href="https://linkedin.com/in/furkankeskiner54">LinkedIn</a>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Furkan Keskiner | Portfolio</title>
+  <meta name="description" content="Furkan Keskiner — Computer Engineer. Projects, skills and contact." />
+  <meta name="theme-color" content="#0b0c10" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Furkan Keskiner | Portfolio" />
+  <meta property="og:description" content="Projects, skills and contact." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container headerInner">
+      <a class="logo" href="#top" aria-label="Home">FK</a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a class="btn small" href="assets/resume.pdf" target="_blank" rel="noopener">CV</a>
+      </nav>
+
+      <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="container mobileNav" id="mobileNav" hidden>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener">Download CV</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container heroGrid">
+        <div>
+          <p class="pill">Available for opportunities</p>
+          <h1>Furkan Keskiner</h1>
+          <p class="headline">
+            Computer Engineer building web applications and data-driven systems.
+          </p>
+
+          <div class="ctaRow">
+            <a class="btn" href="#projects">View projects</a>
+            <a class="btn ghost" href="#contact">Contact</a>
+          </div>
+
+          <div class="linkRow">
+            <a href="https://github.com/furkankeskiner" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/furkankeskiner54" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="mailto:furkannkeskiner@gmail.com">furkannkeskiner@gmail.com</a>
+          </div>
+        </div>
+
+        <aside class="card">
+          <div class="cardTop">
+            <div class="avatar" aria-hidden="true">FK</div>
+            <div>
+              <p class="muted small">Focus</p>
+              <p class="strong">Frontend • APIs • Data</p>
+            </div>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <p class="muted small">Location</p>
+              <p class="strong">Turkey</p>
+            </div>
+            <div class="stat">
+              <p class="muted small">Stack</p>
+              <p class="strong">React / Vue / Python</p>
+            </div>
+            <div class="stat">
+              <p class="muted small">Interest</p>
+              <p class="strong">QA & Automation</p>
+            </div>
+          </div>
+
+          <hr class="hr" />
+
+          <p class="muted">
+            I enjoy shipping clean UI, reliable integrations, and measurable improvements.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container sectionGrid">
+        <div>
+          <h2>About</h2>
+          <p class="muted">
+            I’m a Computer Engineering graduate. I’ve built web applications, worked with REST APIs,
+            and contributed to projects involving data cleaning and machine learning workflows.
+          </p>
+          <p class="muted">
+            I like practical engineering: clear requirements, measurable outcomes, and maintainable code.
+            Currently, I’m focused on strengthening my portfolio and growing in software quality and automation.
+          </p>
+
+          <div class="miniRow">
+            <a class="mini" href="assets/resume.pdf" target="_blank" rel="noopener">Download CV</a>
+            <a class="mini" href="#contact">Let’s talk</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Highlights</h3>
+          <ul class="list">
+            <li>Built a retail web app with barcode scanning and stock/sales features.</li>
+            <li>Worked on data cleaning + similarity detection for job positions.</li>
+            <li>Contributed to a React-based platform during internship.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>Projects</h2>
+          <p class="muted">A few things I’ve built and contributed to.</p>
+        </div>
+
+        <div class="grid" id="projectGrid"></div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>Skills</h2>
+          <p class="muted">Tools and technologies I use.</p>
+        </div>
+        <div class="chips" id="skillChips"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container sectionGrid">
+        <div>
+          <h2>Contact</h2>
+          <p class="muted">
+            Want to collaborate or discuss an opportunity? The fastest way is email or LinkedIn.
+          </p>
+
+          <div class="ctaRow">
+            <a class="btn" href="mailto:furkannkeskiner@gmail.com">Email me</a>
+            <a class="btn ghost" href="https://www.linkedin.com/in/furkankeskiner54" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+
+          <p class="muted small">
+            Prefer GitHub? Feel free to check my repos and pinned projects.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Quick links</h3>
+          <div class="quickLinks">
+            <a href="https://github.com/furkankeskiner" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/furkankeskiner54" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="assets/resume.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+            <a href="mailto:furkannkeskiner@gmail.com">furkannkeskiner@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footerInner">
+        <p class="muted small">© <span id="year"></span> Furkan Keskiner</p>
+        <a class="muted small" href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
