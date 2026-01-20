@@ -37,13 +37,35 @@
       </button>
     </div>
 
-    <div class="container mobileNav" id="mobileNav" hidden>
+    <!-- Mobile menu overlay -->
+<div class="mobileOverlay" id="mobileOverlay" hidden>
+  <div class="mobilePanel">
+    <div class="mobileTop">
+      <div class="mobileBrand">
+        <div class="avatarSmall" aria-hidden="true">FK</div>
+        <div>
+          <p class="strong">Furkan Keskiner</p>
+          <p class="muted small">Computer Engineer</p>
+        </div>
+      </div>
+
+      <button class="closeBtn" id="closeBtn" aria-label="Close menu">✕</button>
+    </div>
+
+    <nav class="mobileLinks" aria-label="Mobile">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
-      
+    </nav>
+
+    <div class="mobileActions">
+      <a class="btn" href="mailto:furkannkeskiner@gmail.com">Email</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/furkankeskiner54" target="_blank" rel="noopener">LinkedIn</a>
     </div>
+  </div>
+</div>
+
   </header>
 
   <main id="top">
