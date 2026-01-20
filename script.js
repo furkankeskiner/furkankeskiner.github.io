@@ -60,22 +60,41 @@ function renderSkills() {
 
 function initMenu() {
   const btn = document.getElementById("menuBtn");
-  const nav = document.getElementById("mobileNav");
+  const overlay = document.getElementById("mobileOverlay");
+  const closeBtn = document.getElementById("closeBtn");
+
+  function openMenu() {
+    overlay.removeAttribute("hidden");
+    btn?.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeMenu() {
+    overlay.setAttribute("hidden", "");
+    btn?.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+  }
+
   btn?.addEventListener("click", () => {
-    const open = nav.hasAttribute("hidden") ? true : false;
-    if (open) nav.removeAttribute("hidden");
-    else nav.setAttribute("hidden", "");
-    btn.setAttribute("aria-expanded", String(open));
+    const isHidden = overlay.hasAttribute("hidden");
+    isHidden ? openMenu() : closeMenu();
   });
 
-  // close on click
-  nav?.querySelectorAll("a").forEach(a => {
-    a.addEventListener("click", () => {
-      nav.setAttribute("hidden", "");
-      btn.setAttribute("aria-expanded", "false");
-    });
+  closeBtn?.addEventListener("click", closeMenu);
+
+  overlay?.addEventListener("click", (e) => {
+    if (e.target === overlay) closeMenu();
+  });
+
+  overlay?.querySelectorAll("a").forEach(a => {
+    a.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !overlay.hasAttribute("hidden")) closeMenu();
   });
 }
+
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
