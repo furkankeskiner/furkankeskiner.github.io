@@ -1,29 +1,30 @@
 const projects = [
   {
-    title: "Rahat-Sat — Retail Web Application",
+    title: "RahatSat — Retail Web Application",
     desc:
-      "Built a web app to simplify retail operations: barcode scanning, price updates, VAT setup, stock tracking, and sales listings. Implemented REST API integration and a camera-based scanning component (BarcodeCamera.vue).",
-    tags: ["Vue.js", "REST API", "Barcode", "Retail"],
+      "A web application developed to simplify small retail operations. The system supports barcode scanning via camera, product and price management, VAT configuration, stock tracking, and sales listing through a REST-based backend.",
+    tags: ["Vue.js", "REST API", "Barcode Scanning", "Retail Systems"],
     repo: "",
     live: ""
   },
   {
-    title: "Data Cleaning & Similarity Detection",
+    title: "Job Data Cleaning & Similarity Analysis",
     desc:
-      "Worked on data cleaning, analysis, and ML workflows. Built preprocessing steps to improve data quality and usability for model development using common Python data/ML libraries.",
-    tags: ["Python", "Pandas", "Scikit-Learn", "Data"],
+      "Worked on data cleaning and preprocessing pipelines for job position datasets. Improved data quality and applied similarity detection techniques to support more accurate analysis and model readiness.",
+    tags: ["Python", "Pandas", "Scikit-Learn", "Data Cleaning"],
     repo: "",
     live: ""
   },
   {
-    title: "PDOnline — Platform Contribution",
+    title: "PDOnline — Frontend Contribution",
     desc:
-      "Contributed to the development of a React-based platform during internship. Supported UI improvements and general frontend development tasks.",
-    tags: ["React.js", "Frontend", "UI"],
+      "Contributed to a React-based psychological support platform during internship. Supported UI development, component improvements, and general frontend tasks within a collaborative team environment.",
+    tags: ["React.js", "Frontend", "UI Components"],
     repo: "",
     live: ""
-  },
+  }
 ];
+
 
 const skills = [
   "HTML", "CSS", "JavaScript",
